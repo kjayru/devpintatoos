@@ -10,8 +10,90 @@ Pintattoo - Explore All Instagram Online
     <meta name="viewport" content="width=970, maximum-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/lib.css">
+      <!--[if lt IE 9]>
+
+    <link href="css/multiview.ie8.css" rel="stylesheet" type="text/css" />
+
+    <![endif]-->
+
+    <!--[if IE 9]>
+
+    <link href="css/multiview.ie9.css" rel="stylesheet" type="text/css" />
+
+    <![endif]-->
+
+    <!--[if IE 7]>
+
+    <link href="css/multiview.ie7.css" rel="stylesheet" type="text/css" />
+
+    <![endif]-->
+
+      <script type="text/javascript">
+        var rootUrl = 'http://kantamerica.com/desarrollo';
+        if (typeof (console) == "undefined")
+            console = { log: function (content) { } };
+        if (typeof (MultiViewLang) == "undefined")
+            MultiViewLang = {};
+        var userPageBaseUrl = '';
+        var searchTagBaseUrl = '/tag';
+        var searchUserBaseUrl = '/findpeople';
+    </script>
+<script type="text/javascript">
+
+    function getAdSize() {
+
+        try{
+
+            var width = document.documentElement.clientWidth;
+
+            var size = null;
+
+            if (width >= 320 && width < 468)
+
+                size = [320, 50];
+
+            else if (width < 728) {
+
+                size = [468, 60];
+
+            } else if (width < 970) {
+
+                size = [728, 90];
+
+            } else {
+
+                //size = [970, 90];
+
+                size = [728, 90];
+
+            }
+
+            return size;
+
+        }
+
+        catch (e) {
+
+            return [728, 90];
+
+        }
+
+    }
+
+</script>
+
+
 </head>
 <body>
+<script type="text/javascript">
+
+    var following = false;
+
+    var followedMe = false;
+
+    var followRequested  = false;
+
+</script>
     <div style="display: none">Explore online with the best experience, follow interesting people, post comment and share photo to Facebook, twitter and all other websites.</div>
     <div class="bodyContent">
 <div class="multiViewTopBannerWrapper">

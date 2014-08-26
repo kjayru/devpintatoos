@@ -1,0 +1,74 @@
+﻿.brickActions {
+    background: none;
+    padding-top: 10px;
+    height: 28px;
+}
+
+.brickShare {
+    top: 38px;
+}
+
+.abtn {
+    display: inline;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+}
+
+    .abtn:hover {
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        -moz-border-radius: 0px;
+        -webkit-border-radius: 0px;
+        border-radius: 0px;
+    }
+
+.brickBody {
+    /*border: solid 1px #ddd;*/
+}
+
+.shadow {
+    background: none !important;
+}
+
+.likeButton {
+    display: inline;
+}
+
+.blackOverlay {
+    background: none !important;
+}
+
+#mediaDetail.modal {
+    overflow: hidden;
+}
+
+#mediaDetail .modal-body {
+    overflow: hidden;
+}
+
+.loginForm {
+}
+
+
+
+.emojiInput .arrow {
+    display: none;
+}
+
+.navButtons a span {
+    display: none;
+}
+
+
+.multiViewTopBannerToolbar {
+    /*border-bottom: solid 1px #BEBEBE;*/
+}
+
+.multiViewTopBannerWrapper {
+    height: 25px;
+}

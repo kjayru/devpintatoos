@@ -1,0 +1,60 @@
+﻿.brickShare {
+    top: 42px;
+}
+
+.close {
+    line-height: 24px;
+}
+
+body {
+    padding-top: 40px;
+}
+
+.brickActions .btn-group {
+    display: inline;
+}
+
+.accountPopover {
+    width: 153px;
+}
+
+
+.photoExtraInfo {
+    background: #000;
+    opacity: .7;
+    filter: alpha(opacity=70);
+}
+
+.sharePopover {
+    width: 105px;
+}
+
+.multiViewTopBannerWrapper {
+    padding-top: 0;
+}
+
+.multiViewTopBannerToolbar {
+    margin-top: -7px;
+}
+
+.multiViewTopBannerToolbarPopover .multiViewTopBannerToolbar {
+    margin-top: 0;
+}
+
+/*.profileBannerWrapper {
+    margin-top: -7px;
+}*/
+
+
+.navButtons a img {
+    display: none;
+}
+
+
+.multiViewTopBannerToolbar {
+    /*border-bottom: solid 1px #BEBEBE;*/
+}
+
+.multiViewTopBannerWrapper {
+    height: 25px;
+}

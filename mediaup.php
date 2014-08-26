@@ -27,18 +27,18 @@ require ('inc.header.php');
 						        <i class="glyphicon glyphicon-plus"></i>
 						        <span>Select file...</span>
 						    
-						        <input id="fileupload2" type="file" name="files">
+						        <input id="fileupload" type="file" name="files">
 						    </span>
 	        			
 	        		</div>
 	        	</div>
 	        	<div id="files" class="files"> 
-	        	 <img src="" id="pfiles2" width="40" />
+	        	 <img src="" id="pfiles" width="40" />
 	        	</div>
 	        	    <div id="progress" class="progress">
 				        <div class="progress-bar progress-bar-success"></div>
 				    </div>
-	        	<input type="hidden" id="pictures" name="pictures" value="">
+	        	<input type="hidden" id="picture" class="picture" name="picture" value="">
 	        	<a href="#" id="sendpost" class="sendButton btn btn-success">Send</a>
         	</fieldset>
         </form>

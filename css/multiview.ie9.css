@@ -1,0 +1,41 @@
+﻿.brickActions {
+    padding-top: 10px;
+    height: 28px;
+}
+
+.brickShare {
+    top: 38px;
+}
+
+.abtn {
+    display: inline;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding: 7px 7px;
+}
+
+    .abtn:hover {
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+
+
+.multiViewTopBannerToolbar .btn i {
+    vertical-align: top;
+}
+
+.highlightGridWrapperWrapper .highlightGridWrapper::before {
+    content: "";
+    position: absolute;
+    top: -200%;
+    left: -200%;
+    width: 1px;
+    width: 1px;
+    z-index: 1000;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    pointer-events: none;
+}

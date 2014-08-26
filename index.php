@@ -22,8 +22,10 @@ echo "</pre>";*/
             </a>
 
         </div>
-      <div class="brick" id="" mediaid="" actioninit="true" style="left: 75px; top: 14px; z-index: 100;">
-      <?php foreach($resultado as $row){ ?>
+        
+         <?php $i=1; foreach($resultado as $row){ ?>
+      <div class="brick" id="imga-<?=$i ?>" mediaid="<?=$i ?>" actioninit="true">
+     
                 <div class="brickBody">
 <!--- head post --->
                         <div class="user owner clearfix poster">
@@ -40,11 +42,11 @@ echo "</pre>";*/
                     <div class="pic">
 
                         <div class="brickActions" style="display: none;">
-                            <a onmousedown="like('790085311270104999_265180138')" class="brickLike btn btn-danger" title="Double-click on the photo also likes">
+                            <a class="brickLike btn btn-danger" title="Double-click on the photo also likes">
                                 <i class="icon-heart icon-white"></i><span class="aText">Like</span>
                             </a>
-                            <a onmousedown="showBrickShareMenu(this)" class="btn btn-primary dropdown-toggle" href="javascript:void(0)" title="Share" rel="nofollow"><i class="icon-share-alt icon-white"></i><span class="aText">Share</span></a>
-                            <a onmousedown="comment('790085311270104999_265180138')" class="btn btn-success" title="Comment">
+                            <a class="btn btn-primary dropdown-toggle" href="javascript:void(0)" title="Share" rel="nofollow"><i class="icon-share-alt icon-white"></i><span class="aText">Share</span></a>
+                            <a class="btn btn-success" title="Comment">
                                 <i class="icon-comment icon-white"></i><span class="aText">Comment</span>
                             </a>
                                                     </div>
@@ -93,9 +95,10 @@ echo "</pre>";*/
         <!--fin comentarios --->
                 </div>
                 
-      <?php } ?>          
+           
                 <div class="shadow"></div>
-            </div>           
+            </div> 
+             <?php $i++; } ?>              
   </div>
 <?php require ('inc.footer.php');
-require ('inc.foot.php'); ?>>
+require ('inc.foot.php'); ?>

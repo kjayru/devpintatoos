@@ -37,15 +37,21 @@ class Post{
 			}
 	   return $response;
 	}
-	function savepost($id_user,$comentario,$pictures){
+	function savepost($id_user,$comentario,$picture){
 		$cnx = new MySQL();
+		$aid_user    = getParam($id_user,"");
+		$acomentario = getParam($comentario,"");
+		$apicture    = getParam($picture,"");
 		$res = sprintf("insert into post(id_user,comentario,media)values(%s,%s,%s)",
-							getSQL($id_user, "int"),
-							getSQL($comentario, "text"),
-							getSQL($media, "text")
-							);
-		$resulta=$cnx->query($res);
-		$resulta->read();
-		return json_encode(array("rpta"=>"ok"));
+							getSQL($aid_user, "text"),
+							getSQL($acomentario, "text"),
+							getSQL($apicture, "text"));
+		$cnx->execute($res);
+		$query = "SELECT usuario FROM registro WHERE id = '$id_user'";
+		$q = $cnx->query($query);
+		$q->read();
+		$q->next();
+		$response = json_encode(array("rpta"=>"ok","nombres"=>$q->field('usuario')));
+		return $response;
 	}	   
 }

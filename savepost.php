@@ -2,6 +2,9 @@
 require_once("clases/class.post.php");
 $post = new Post();
 $comentario = $_POST['comentario'];
-$pictures   = $_POST['pictures'];
-$reg = $post->savepost($_SESSION['id_user'],$comentario,$pictures);
+$picture   = $_POST['picture'];
+$id_user =  $_SESSION['id_user'];
+
+$resultado = $post->savepost($id_user,$comentario,$picture);
+echo $resultado;
 ?>

@@ -75,7 +75,8 @@
 <div class="emojiInputPopoverContent" style="display: none;"></div>
 
 </div>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/lib.js"></script>
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
 
  <script src="js/vendor/jquery.ui.widget.js"></script>
 <!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
@@ -84,7 +85,7 @@
 <script src="js/jquery.fileupload.js"></script>
 <script src="js/main.js"></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-<!--<script src="js/lib.js"></script>-->
+
 
 </body>
 
