@@ -10,15 +10,6 @@ require ('inc.header.php');
          		<legend>New Post</legend>
 	        	
 	        	<div class="control-group required">
-	        		<label class="control-label">Name</label>
-	        		<div class="controls">
-	        	 		<div class="input-prepend">
-	        				<input type="text" name="username" id="username" />
-	        			</div>
-	        		</div>
-	        		
-	        	</div>
-	        	<div class="control-group required">
 	        		<label class="control-label">Comment</label>
 	        		<div class="controls">
 	        	 		<div class="input-prepend">
@@ -36,18 +27,18 @@ require ('inc.header.php');
 						        <i class="glyphicon glyphicon-plus"></i>
 						        <span>Select file...</span>
 						    
-						        <input id="fileupload" type="file" name="files">
+						        <input id="fileupload2" type="file" name="files">
 						    </span>
 	        			
 	        		</div>
 	        	</div>
 	        	<div id="files" class="files"> 
-	        	 <img src="" id="pfiles" width="40" />
+	        	 <img src="" id="pfiles2" width="40" />
 	        	</div>
 	        	    <div id="progress" class="progress">
 				        <div class="progress-bar progress-bar-success"></div>
 				    </div>
-	        	<input type="hidden" id="picture" name="picture" value="">
+	        	<input type="hidden" id="pictures" name="pictures" value="">
 	        	<a href="#" id="sendpost" class="sendButton btn btn-success">Send</a>
         	</fieldset>
         </form>

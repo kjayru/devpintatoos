@@ -34,7 +34,6 @@ class Registro{
 				echo json_encode($mensaje);
 			}
 	}
-	
 	function crear_usuario($email,$usuario,$password,$phone,$picture){
 		$cnx = new MySQL();
 		///verificamos existencia de registros
@@ -111,8 +110,7 @@ class Registro{
 							$mensaje = array("rpta"=>"ok","mensaje"=>"actualización correcta");
 							echo json_encode($mensaje);
 	}
-
-   function borrar($id_user){
+    function borrar($id_user){
    		$cnx = new MySQL();
    		$query = "delete from registro where id='$id_user'";
 		$result= $cnx->query($query);

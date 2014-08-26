@@ -36,6 +36,48 @@ $(document).ready(function(){
 			});
 	});
 	
+	
+	$("#sendpost").click(function(e){
+		e.preventDefault();
+		var midata = $("#formpost").serialize();
+		$.ajax({
+			url:"savepost.php",
+			data:midata,
+			type:"POST",
+			dataType:"json",
+			before:function(){},
+			success:function(data){
+				 if(data.rpta=="ok"){
+				    window.location.href="index.php?user="+data.nombres;
+				   }else{
+					alert(data.mensaje);
+				  }
+				}
+			});
+	});
+	
+	
+	
+	$('#fileupload2').fileupload({
+        url: "uploadfile.php",
+        dataType: 'json',
+        done: function (e, data) {
+			console.log("eventos");
+            $.each(data.result.files, function (index, file) {
+               // $('<p/>').text(file.name).appendTo('#files');
+                $("#pfiles2").attr("src","files/thumbnail/"+file.name);
+                $("#pictures").val(file.name);
+            });
+        },
+        progressall: function (e, data) {
+            var progress = parseInt(data.loaded / data.total * 100, 10);
+            $('#progress .progress-bar').css(
+                'width',
+                progress + '%'
+            );
+        }
+    }).prop('disabled', !$.support.fileInput)
+        .parent().addClass($.support.fileInput ? undefined : 'disabled');
 	/*var sfield = $("#s");
 	var container = $("#photos");
 	var timer;
@@ -112,4 +154,7 @@ $(function () {
         }
     }).prop('disabled', !$.support.fileInput)
         .parent().addClass($.support.fileInput ? undefined : 'disabled');
+		
+		
+
 });
