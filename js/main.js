@@ -1,4 +1,18 @@
 $(document).ready(function(){
+	$(".customGPlusSignIn").hover(
+		function(){
+			$(this).css({ "opacity": "1",
+						  "filter": "Alpha(opacity=100)",
+						  "text-decoration":"none",
+						  "background": "rgba(255,255,255,.2)"});
+			},
+		function(){
+			$(this).css({ "opacity": "1",
+						  "filter": "Alpha(opacity=80)",
+						  "text-decoration":"none",
+						  "background":"transparent"});
+			}
+		);
 	$("#send").click(function(e){
 			e.preventDefault();
 		var midata = $("#registro").serialize();
@@ -55,9 +69,40 @@ $(document).ready(function(){
 				}
 			});
 	});
-	
 
+$(".lfacebook").click(function(e){
+	e.preventDefault();
+	console.log("evento");
+	FB.login(checkLoginStatus,{ scope: ' user_likes, publish_actions, offline_access,publish_stream,email'});	
+	function checkLoginStatus(response) {
+        if(response && response.status == 'connected') {          
+		  var uid = response.authResponse.userID;
+		  var accessToken = response.authResponse.accessToken;
+		  FB.api('/me', function(response) {	
+		  var name     = response.first_name;
+		  var lastname = response.last_name;
+		  var email    = response.email;
+		  $("#nombres").attr("value",name);
+		  $("#correo").attr("value",email);
+		 var registro=({'idface':uid,'correo':email});
+		
+        
+      });
+	  }
+	FB.getLoginStatus(function(response) {
+	  if (response.status === 'connected') {
+		var uid = response.authResponse.userID;
+	  }
+   });
+  };
+});	
+
+$(".ltwitter").click(function(){
+            TwitterLogin();
+	});
 });
+
+
 
 $(function () {
     'use strict';

@@ -23,3 +23,15 @@ background-size: contain !important;*/
 	top: -46px;
 	left: 300px;
 }
+.customGPlusSignIn {
+display: block;
+padding: 6px 9px 5px 9px;
+height: 23px;
+float: left;
+color: #fff;
+opacity: .8;
+filter: Alpha(opacity=80);
+text-decoration: none;
+font-weight: normal;
+cursor: pointer;
+}
